@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 // import ParticleBackground from "./components/ParticleBackground";
+import IntroAnimation from "./components/IntroAnimation";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCurser";
@@ -12,21 +14,29 @@ import Testimonials from "./sections/Testimonials";
 
 
 export default function App() {
-  return (
-    <div className = "relative gradient text-white ">
-      <CustomCursor />
-      {/* <ParticleBackground /> */}
-      
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Testimonials />
-      <Contact />
-      <Footer />
+  const [showIntro, setShowIntro] = useState(true);
 
-    </div>
+  return (
+    <>
+      {showIntro && (
+        <IntroAnimation onFinish={() => setShowIntro(false)} />
+      )}
+
+      <div className="relative gradient text-white ">
+        <CustomCursor />
+        {/* <ParticleBackground /> */}
+
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Testimonials />
+        <Contact />
+        <Footer />
+
+      </div>
+    </>
   );
 }

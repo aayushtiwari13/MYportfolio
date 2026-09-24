@@ -3,7 +3,7 @@ import ParticleBackground from "../components/ParticleBackground";
 import { useMemo } from "react";
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
-
+import avator from "../assets/avator.png";
 const socials = [
     {
         Icon: FaInstagram,
@@ -26,7 +26,7 @@ const glowVariants = {
     initial: {
         scale: 1,
         y: 0,
-        filter: "drop-shadow(0 0 0 rgba(0,0,0,0)))",
+        filter: "drop-shadow(0 0 0 rgba(0,0,0,0))",
     },
 
     hover: {
@@ -103,7 +103,7 @@ export default function Home() {
                 ></div>
             </div>
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-16">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                 <div className="flex flex-col justify-center text-center lg:text-left relative">
 
@@ -203,6 +203,17 @@ export default function Home() {
                         </motion.div>
 
                     </div>
+                </div>
+
+                <div className="flex justify-center lg:justify-end order-first lg:order-last">
+                    <motion.img
+                        src={avator}
+                        alt="Ayush Tiwari"
+                        className="w-56 sm:w-72 md:w-80 lg:w-full max-w-md object-contain"
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                    />
                 </div>
 
             </div>
