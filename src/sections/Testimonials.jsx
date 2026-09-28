@@ -41,39 +41,126 @@ export default function Testimonials() {
                 </h2>
 
                 {/* Testimonials Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
 
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="border border-white/20 rounded-lg p-6 
-                            bg-white/[0.03] hover:bg-white/[0.06] 
-                            transition-all duration-300"
+                            className="
+                                group relative overflow-hidden
+                                border border-white/10
+                                rounded-2xl
+                                p-6
+                                bg-white/[0.03]
+                                cursor-pointer
+
+                                transition-all duration-500 ease-out
+
+                                hover:-translate-y-2
+                                hover:scale-[1.02]
+                                hover:border-white/30
+                                hover:bg-white/[0.07]
+                                hover:shadow-[0_20px_50px_rgba(255,255,255,0.08)]
+
+                                active:scale-[0.98]
+                            "
                         >
 
+                            {/* Hover Glow */}
+                            <div
+                                className="
+                                    absolute
+                                    -top-20
+                                    -right-20
+                                    w-40
+                                    h-40
+                                    rounded-full
+                                    bg-white/10
+                                    blur-3xl
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition-opacity
+                                    duration-500
+                                "
+                            />
+
                             {/* Profile Image */}
-                            <div className="flex justify-center mb-4">
+                            <div className="flex justify-center mb-5 relative z-10">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
-                                    className="w-10 h-10 rounded-full object-cover"
+                                    className="
+                                        w-12
+                                        h-12
+                                        rounded-full
+                                        object-cover
+                                        ring-2
+                                        ring-white/10
+
+                                        transition-all
+                                        duration-500
+
+                                        group-hover:scale-110
+                                        group-hover:ring-white/40
+                                    "
                                 />
                             </div>
 
                             {/* Testimonial */}
-                            <p className="text-gray-300 text-xs md:text-sm 
-                            text-center leading-relaxed">
+                            <p
+                                className="
+                                    relative
+                                    z-10
+                                    text-gray-400
+                                    text-sm
+                                    text-center
+                                    leading-relaxed
+
+                                    transition-colors
+                                    duration-500
+
+                                    group-hover:text-gray-200
+                                "
+                            >
                                 "{testimonial.text}"
                             </p>
 
                             {/* Name */}
-                            <h3 className="text-white text-sm font-medium 
-                            text-center mt-4">
+                            <h3
+                                className="
+                                    relative
+                                    z-10
+                                    text-white
+                                    text-sm
+                                    font-semibold
+                                    text-center
+                                    mt-5
+
+                                    transition-all
+                                    duration-500
+
+                                    group-hover:scale-105
+                                "
+                            >
                                 {testimonial.name}
                             </h3>
 
                             {/* Role */}
-                            <p className="text-gray-500 text-xs text-center mt-1">
+                            <p
+                                className="
+                                    relative
+                                    z-10
+                                    text-gray-500
+                                    text-xs
+                                    text-center
+                                    mt-1
+
+                                    transition-colors
+                                    duration-500
+
+                                    group-hover:text-gray-300
+                                "
+                            >
                                 {testimonial.role}
                             </p>
 
