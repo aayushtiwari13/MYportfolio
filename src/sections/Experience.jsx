@@ -3,29 +3,53 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 const experiences = [
     {
-        title: "Web Developer",
-        company: "Brain Mentors",
-        period: "2022",
+        title: "software enginner intern",
+        company: "Pledge india foundation ",
+        period: "2026",
         description:
             "Worked with team to build high-performance apps, integrated AI features, and improved engagement by 10%.",
         position: "top",
     },
     {
-        title: "Web Developer Intern",
-        company: "Mobisoft Technologies",
-        period: "2022 - 2023",
+        title: "open source contributor",
+        company: "GSoC",
+        period: "2027",
         description:
-            "In this internship, I gained valuable hands on experience and exposure to various aspects of web development.",
+            "In this I gained valuable hands on experience and exposure to various aspects of Open source.",
         position: "bottom",
     },
     {
-        title: "Graduate Engineer",
-        company: "HCL Technologies",
-        period: "2024 - 2025",
+        title: "Software Engineer intern ",
+        company: "Google India",
+        period: "2027",
         description:
-            "Built the frontend of a GenAI-powered PV intake application using NestJs and TypeScript for a U.S life sciences client, enabling automated patient report processing across global regions.",
+            "Worked here as an Full stack developer and gained the best exposure of the journey started in 2025.",
         position: "top",
     },
+    {
+        title: "Software Engineer intern ",
+        company: "Microsoft India",
+        period: "2027-28",
+        description:
+            "Worked as an AI engineer and got hands on experience of real world projects",
+        position: "bottom",
+    },
+    {
+        title: "Software Engineer intern",
+        company: "Rubrik",
+        period: "2028",
+        description:
+            "Worked as an backend engineer and got hands on experience of real world projects",
+        position: "top",
+    },
+    {
+        title: "Software Engineer ",
+        company: "Google India",
+        period: "2029",
+        description:
+            "Now I am an Full stack AI enginer at my dream company",
+        position: "bottom",
+    }
 ];
 
 const count = experiences.length;
